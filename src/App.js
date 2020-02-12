@@ -1,13 +1,20 @@
 import React from 'react';
 import ListWrapper from './components/ListWrapper/ListWrapper';
 import './index.css';
-import MyComponent from './components/MyComponent/MyComponent'
 
-const App = () => (
+class App  extends React.Component{
+    state = {
+        items: [],
+    }
+    render (){
+        return (
     <div>
-        <MyComponent />
-        <ListWrapper />
+        <ListWrapper 
+        items={this.state.items}
+        />
     </div>
-);
+        )
+    }
+    };
 
 export default App;

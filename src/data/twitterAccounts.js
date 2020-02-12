@@ -29,3 +29,5 @@ export const twitterAccounts = [
         twitterLink: 'https://twitter.com/kentcdodds',
     },
 ]
+
+export default twitterAccounts;
