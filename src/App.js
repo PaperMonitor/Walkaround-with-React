@@ -4,6 +4,7 @@ import './index.css';
 
 const App = () => (
     <div>
+        <MyComponent />
         <ListWrapper />
     </div>
 );
