@@ -33,13 +33,23 @@ class App  extends React.Component{
     state = {
         items: [...initialStateArray],
     }
+
+    addItem = (e) => {
+        e.preventDefault();
+        console.log(e.target[0].value);
+        console.log(e.target[1].value);
+        console.log(e.target[2].value);
+        console.log(e.target[3].value);
+
+    }
+
     render (){
         return (
             <div>
                 <ListWrapper 
                     items={this.state.items}
                 />
-                <Form />
+                <Form submitFn={this.addItem}/>
             </div>
             )
         }
