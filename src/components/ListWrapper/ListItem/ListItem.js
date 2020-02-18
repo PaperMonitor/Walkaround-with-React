@@ -2,35 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import './ListItem.css';
 
-const ListItem = ({ 
+const ListItem = ({
+    image,
     name,
     description,
-    image,
     twitterLink
 }) => (
     <li className="listItem__wrapper">
-        <img 
-        src={image} 
-        className="listItem__image"
-        alt={name}
+        <img
+            src={image} className="listItem__image"
+            alt={name}
         />
         <div>
-            <h2 className="listItem__name">{name}</h2>
-            <p className="listItem__description">{description}</p>
-            <a href={twitterLink} className="listItem__button">Visit Twitter Page</a>
+            <h2 className="listItem__name">
+            {name}
+            </h2>
+            <p className="listItem__description">
+            {description}
+            </p>
+            <a href={twitterLink} 
+            target="_blank"
+            className="listItem__button">visit twitter page</a>
         </div>
     </li>
 );
 
 ListItem.propTypes = {
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string, //is not required, if the description is blank it will obtain the data from listItem.defaultprops
     image: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string,
     twitterLink: PropTypes.string.isRequired,
 };
 
 ListItem.defaultProps = {
-    description: "One of the React creators" //the message that will come up if the description props is empty
+    description: 'One of the React creators',
 }
 
 export default ListItem;

@@ -4,7 +4,10 @@ import styles from "./Form.module.scss";
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
     <h2>Add new twitter account</h2>
-    <form autoComplete="off" className={styles.form} onSubmit={submitFn}>
+    <form 
+    autoComplete="off" 
+    className={styles.form} 
+    onSubmit={submitFn}>
       <div className={styles.formItem}>
         <input
           className={styles.input}
@@ -60,7 +63,10 @@ const Form = ({ submitFn }) => (
         </label>
         <div className={styles.formItemBar} />
       </div>
-      <button className={styles.button}>add new item</button>
+      <button 
+      className={styles.button}
+      type="submit"
+      >add new item</button>
     </form>
   </div>
 );
